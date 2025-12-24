@@ -93,6 +93,7 @@
     display: none;
     position: absolute;
     min-width: 200px;
+    background-color: #43A047;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.753);
     border-radius: 10px;
     overflow: hidden;
@@ -320,13 +321,7 @@
     }
 }
 
-/* SVG */
-.mountain {
-    position: relative;
-    top: -60px;
-    width: 100%;
-    z-index: 2;
-}
+
 
 /* ===== RESPONSIVE ===== */
 
@@ -1463,5 +1458,149 @@
     .carousel-card {
         width: 90vw;
         height: 200px;
+    }
+}
+
+.event-date-block {
+    width: 100%;
+    padding: 32px 16px;
+    text-align: center;
+}
+
+/* Typography */
+.event-date {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ff6b6b;
+}
+
+.event-day {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 8px;
+}
+
+.event-time {
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Animation */
+.animate-fade .event-date {
+    animation: slideFade 0.8s ease forwards;
+}
+
+.animate-fade .event-day {
+    animation: slideFade 0.8s ease forwards;
+    animation-delay: 0.15s;
+}
+
+.animate-fade .event-time {
+    animation: slideFade 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .event-date {
+        font-size: 2.6rem;
+    }
+
+    .event-day {
+        font-size: 1.6rem;
+    }
+
+    .event-time {
+        font-size: 1.2rem;
+    }
+}
+
+
+.event-date-block {
+    width: 100%;
+    padding: 32px 16px;
+    text-align: center;
+}
+
+/* Typing Effect */
+.typing {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #ff6b6b;
+    animation: typing 2s steps(20, end), blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* Fade for rest */
+.fade-in {
+    opacity: 0;
+    animation: fade 1s ease forwards;
+    animation-delay: 2.2s;
+}
+
+.event-day {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+.event-time {
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 6px;
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .typing {
+        font-size: 2.6rem;
+    }
+
+    .event-day {
+        font-size: 1.6rem;
+    }
+
+    .event-time {
+        font-size: 1.2rem;
     }
 }

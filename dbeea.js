@@ -86,41 +86,90 @@ function showDetails(eventType) {
 
   if (eventType === "edu") {
     html = `
-      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413" alt="Education Award">
-      <h3>Education Excellence Award</h3>
-      <p>This award recognizes outstanding educators and institutions shaping the future of learning.</p>
-      <ul>
-        <li>School Level Education – Honoring top-performing schools</li>
-        <li>Higher Education – Universities & colleges making an impact</li>
-      </ul>
-      <p><strong>Who can apply:</strong> Teachers, Schools, Colleges, Education Institutions.</p>
-      <p><strong>Results & Recognition:</strong> Certificates, Trophy & Media Coverage.</p>
+    
+      <h3>Devbhumi Education Excellence Awards</h3>
+      <p> To recognize and honour exceptional educators and innovators who have demonstrated dedication,
+creativity, and positive impact in shaping the future of education and society.</p>
+        <ul class="categories">
+            Award Categories
+            <li>50 School Teachers (from all 13 districts of Uttarakhand)<br><strong>School Education Category:</Strong> PRT, TGT, PGT, or Principal working in any recognized government, private, or semi-government school in Uttarakhand.</li>
+
+
+            <li>15 Higher Education Faculty Members.<br><strong>Higher Education Category:</Strong> Lecturer, Assistant Professor, Associate Professor, or Professor working in any recognized government, private, or semi-government college or university in Uttarakhand.</li>
+
+            <li>10 Scientists / Researchers / Innovators<br><strong>Innovation Category:</Strong>Research Scholars or PhD scholars conducting research in any recognized government, private, or semi-government institution in Uttarakhand, or scientists.</li>
+          </ul>
+      <p><strong>Important Conditions:</strong> The nominated individual must have been actively involved in teaching or research in Uttarakhand between 1st July 2024 and 1st August 2025.<br>
+
+Only activities and achievements within the period from 1st July 2024 to 1st August 2025 will be considered for evaluation.<br>
+
+Individuals who have already received this award are not eligible for re-nomination.</p>
+      <p><strong>Societal Value:</strong>This segment celebrates excellence in teaching and innovation — motivating educators to adopt progressive
+methods, inspiring young minds, and highlighting role models who contribute to nation-building through
+education.
+</p>
+      <p><strong>This award is completely free of charge (No Registration Fee, No Charges) and open to teachers, professors, and researchers from government, private, and semi-government institutions.</strong>
+</p>
+  <img src="/public/images/award.JPG" alt="Education Award">
     `;
   } else if (eventType === "innovation") {
     html = `
-      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413" alt="Innovation Challenge">
-      <h3>Innovation Challenge</h3>
-      <p>A platform for students to present innovative ideas and research.</p>
-      <ul>
-        <li>Little Scientist Expo – School-level experiments & projects</li>
-        <li>AI Symposium – College-level students showcase AI solutions</li>
-        <li>Poster Presentation – Creative project displays</li>
+      
+      <h3>Devbhumi Little Scientists</h3>
+      <p>An innovative platform for school students to explore science, creativity, and problem-
+solving through hands-on learning and teamwork.</p>
+ <ol >
+<b>Subthemes:</b>
+<li><b>STEM Project Demonstration:</b>Showcasing practical models and experiments that reflect scientific
+concepts in an easy-to-understand manner and demonstrate their real-world applications.</li><br>
+<li><b>Prototype of Innovation:</b>Presenting working prototypes that address real societal problems by
+demonstrating creativity, innovation, and applicability to everyday challenges.</li><br>
+<li><b>Idea Poster Presentation:</b>Displaying innovative ideas and concepts for solving specific problems
+through visually engaging posters that communicate solutions and inspire curiosity.</li><br>
+</ol>
+      <ul> Awards:
+        <li>1st, 2nd, and 3rd Prizes in each category.</li>
+        <li>2 Consolation Prizes per category.</li>
+        <li>Certificates for all participating team members.</li>
       </ul>
-      <p><strong>Who can apply:</strong> School & College students.</p>
-      <p><strong>Results & Recognition:</strong> Certificates, Prizes & Mentorship opportunities.</p>
+      <p><strong>Who can apply:</strong> School Students.</p>
+      <p><strong>Objective & Social Impact:</strong>The event aims to nurture scientific curiosity among school students and build confidence in young
+innovators. It supports the National Education Policy (NEP 2020) vision of promoting creativity,
+experimentation, and critical thinking at the school level.
+It will also bring visibility to schools that foster a culture of innovation, inspiring others to follow
+similar practices.</p>
+      <img src="/public/images/innno.JPG" alt="Innovation Challenge">
     `;
   } else if (eventType === "startup") {
     html = `
-      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413" alt="Startup Expo">
-      <h3>Startup Expo</h3>
-      <p>Open to all startups showcasing innovative products & services.</p>
-      <ul>
-        <li>Startup Presentations – Pitch your product</li>
-        <li>Networking Opportunities – Meet investors & mentors</li>
-        <li>Workshops – Skill-building & guidance</li>
-      </ul>
-      <p><strong>Who can apply:</strong> Startups from all industries.</p>
-      <p><strong>Results & Recognition:</strong> Certificates, Media Coverage & Potential Funding.</p>
+    <h3>Devbhumi Startup Expo</h3>
+    <p>OThe Devbhumi Startup Expo will be a special platform where entrepreneurs and startups
+can present their ideas, products, and innovations to teachers, students, dignitaries, and guests attending the
+event.</p>
+<p>The aim is to promote local innovation, support young entrepreneurs, and connect them with mentors,
+investors, and educational institutions that can help them grow.<p>
+<p>Startups and innovators from Uttarakhand and nearby regions are invited to participate in the Devbhumi
+Startup Expo. The event will focus on ideas and innovations that create a positive impact on society and
+promote sustainable development. Special attention will be given to startups working in areas such as
+Agriculture and Rural Development, Health and Wellness, Education and Skill Development, Environment
+and Green Technologies, Tourism and Local Crafts, and Women-led Startups and Social Enterprises.
+Through this initiative, the Expo aims to encourage innovative thinking, promote local entrepreneurship, and
+support young changemakers who are working to build a better future for the Himalayan region.</p>
+    <ul>Key Features
+    <li>Direct interaction with awardees, academicians, students, and media representatives</li>
+    <li>Opportunities for networking, feedback, partnerships, and market exposure</li>
+    <li>Live demonstrations and product displays</li>
+    </ul>
+    <p><strong>Recognition:</strong> Top 3 startups will be awarded for their innovation, social impact, and business potential<br>Other participants will receive certificates of appreciation.<br>Special mention will be given to women entrepreneurs and rural startups doing inspiring work.</p>
+    <p><strong>Objective & Social Impact:</strong> <ol>
+    <li>To encourage young people to become entrepreneurs.</li>
+    <li>To connect education with innovation and practical learning.</li>
+    <li>To support the Startup India and Atmanirbhar Bharat missions.</li>
+    <li>To help local innovators find visibility, guidance, and opportunities.</li>
+    <li>To inspire students to take interest in problem-solving and creative thinking.</li>
+    </ol></p>
+    <br>
+    <img src="/public/images/expo.JPG" alt="Startup Expo">
     `;
   }
 
@@ -164,3 +213,4 @@ setInterval(slideCarousel, 2500);
 window.addEventListener("resize", () => {
   cardWidth = cards[0].offsetWidth + 20;
 });
+
