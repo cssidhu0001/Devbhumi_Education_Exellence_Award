@@ -214,3 +214,42 @@ window.addEventListener("resize", () => {
   cardWidth = cards[0].offsetWidth + 20;
 });
 
+// Back to TOP
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// Date Day Typing Effect
+
+const section = document.getElementById("eventSection");
+const dateText = document.getElementById("typingDate");
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      // Reset typing
+      dateText.classList.remove("type-active");
+      dateText.style.width = "0";
+
+      setTimeout(() => {
+        dateText.classList.add("type-active");
+      }, 100);
+    }
+  },
+  { threshold: 0.6 }
+);
+
+observer.observe(section);

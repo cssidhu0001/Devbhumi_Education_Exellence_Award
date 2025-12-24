@@ -1461,91 +1461,42 @@
     }
 }
 
-.event-date-block {
+
+
+/* ========================= */
+/* EVENT SECTION */
+/* ========================= */
+.event-section {
     width: 100%;
-    padding: 32px 16px;
+    padding: 80px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.event-wrap {
+    max-width: 800px;
+    width: 100%;
     text-align: center;
 }
 
-/* Typography */
+/* ========================= */
+/* DATE (TYPING) */
+/* ========================= */
 .event-date {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #ff6b6b;
-}
-
-.event-day {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    margin-top: 8px;
-}
-
-.event-time {
-    font-size: 1.4rem;
-    color: #666;
-    margin-top: 6px;
-}
-
-/* Animation */
-.animate-fade .event-date {
-    animation: slideFade 0.8s ease forwards;
-}
-
-.animate-fade .event-day {
-    animation: slideFade 0.8s ease forwards;
-    animation-delay: 0.15s;
-}
-
-.animate-fade .event-time {
-    animation: slideFade 0.8s ease forwards;
-    animation-delay: 0.3s;
-}
-
-@keyframes slideFade {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .event-date {
-        font-size: 2.6rem;
-    }
-
-    .event-day {
-        font-size: 1.6rem;
-    }
-
-    .event-time {
-        font-size: 1.2rem;
-    }
-}
-
-
-.event-date-block {
-    width: 100%;
-    padding: 32px 16px;
-    text-align: center;
-}
-
-/* Typing Effect */
-.typing {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #1B5E20;
     display: inline-block;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #ff6b6b;
-    overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid #ff6b6b;
-    animation: typing 2s steps(20, end), blink 0.7s infinite;
+    overflow: hidden;
+    border-right: 4px solid #6bff75;
+    width: 0;
+}
+
+/* Typing animation class (added via JS) */
+.type-active {
+    animation: typing 2.5s steps(24, end) forwards,
+        blink 0.7s infinite;
 }
 
 @keyframes typing {
@@ -1564,43 +1515,119 @@
     }
 }
 
-/* Fade for rest */
-.fade-in {
-    opacity: 0;
-    animation: fade 1s ease forwards;
-    animation-delay: 2.2s;
-}
-
+/* ========================= */
+/* DAY + UNDERLINE (OLD STYLE) */
+/* ========================= */
 .event-day {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: #333;
-    margin-top: 10px;
+    margin-top: 16px;
+    position: relative;
+    display: inline-block;
 }
 
-.event-time {
+.event-day::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #ffa502);
+}
+
+/* ========================= */
+/* TIME CHIPS */
+/* ========================= */
+.event-time-wrap {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.time-chip {
+    padding: 10px 22px;
     font-size: 1.4rem;
-    color: #666;
-    margin-top: 6px;
+    font-weight: 600;
+    color: #008f0a;
+    background: rgba(107, 255, 114, 0.12);
+    border-radius: 999px;
+    transition: all 0.3s ease;
 }
 
-@keyframes fade {
-    to {
-        opacity: 1;
-    }
+.time-chip:hover {
+    background: #34fe6a;
+    color: #fff;
+    transform: translateY(-4px);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .typing {
-        font-size: 2.6rem;
+.time-sep {
+    font-size: 1.6rem;
+    color: #aaa;
+}
+
+
+@media (max-width: 768px) {
+    .event-date {
+        font-size: 3rem;
     }
 
     .event-day {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
-    .event-time {
+    .time-chip {
         font-size: 1.2rem;
     }
+}
+
+@media (max-width: 480px) {
+    .event-date {
+        font-size: 2.3rem;
+    }
+
+    .event-day {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Back to Top */
+#backToTop {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #07b401;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* Show button */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hover effect */
+#backToTop:hover {
+    background: #029b38;
+    transform: translateY(-4px);
 }
