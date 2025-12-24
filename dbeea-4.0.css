@@ -1631,3 +1631,134 @@
     background: #029b38;
     transform: translateY(-4px);
 }
+
+
+
+/* Executive Team */
+
+.core-team {
+    position: relative;
+    padding: 90px 30px;
+    background: url("https://media.istockphoto.com/id/484389570/photo/himalayas.jpg?s=612x612&w=0&k=20&c=6jM32XJBWlvv6x7AF-av52jlncPkz5hn_AEhjaDSFYI=") center/cover no-repeat;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(8, 45, 40, 0.85),
+            rgba(11, 79, 108, 0.85));
+    z-index: 0;
+}
+
+.core-team h2,
+.core-team .subtitle,
+.team-row {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.core-team h2 {
+    font-size: 42px;
+    color: orange;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin: 12px 0 60px;
+    opacity: 0.9;
+}
+
+.team-row {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.team-card {
+    width: 270px;
+    padding: 30px 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    animation: slideUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.team-card h3 {
+    font-size: 24px;
+    color: orange;
+    margin-bottom: 6px;
+    /* color: #eaffff; */
+}
+
+.designation {
+    font-size: 14px;
+    color: #b7e4c7;
+}
+
+.badge {
+    display: inline-block;
+    margin: 18px 0;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #2dd4bf, #38bdf8);
+    color: #003049;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contact a {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.contact a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Animation delays */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .team-row {
+        flex-wrap: wrap;
+    }
+}
