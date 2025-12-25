@@ -271,3 +271,19 @@ links.forEach((link) => {
     }
   });
 });
+
+const stickyBar = document.getElementById("regSticky");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 80) {
+    stickyBar.classList.remove("full");
+    stickyBar.classList.add("slim");
+  } else {
+    stickyBar.classList.add("full");
+    stickyBar.classList.remove("slim");
+  }
+});
+
+function closeReg() {
+  stickyBar.style.display = "none";
+}
