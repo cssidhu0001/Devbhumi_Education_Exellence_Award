@@ -2,7 +2,9 @@
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const hamburger = document.querySelector(".hamburger");
+
   menu.classList.toggle("active");
+
   if (menu.classList.contains("active")) {
     hamburger.textContent = "✖";
   } else {
@@ -94,7 +96,7 @@ education.
 </p>
       <p><strong>This award is completely free of charge (No Registration Fee, No Charges) and open to teachers, professors, and researchers from government, private, and semi-government institutions.</strong>
 </p>
-  <img src="https://res.cloudinary.com/dpvskptln/image/upload/v1766719779/033_toth4c.jpg" alt="Education Award">
+  <img src="hhttps://res.cloudinary.com/dpvskptln/image/upload/v1766719779/033_toth4c.jpg" alt="Education Award">
     `;
   } else if (eventType === "innovation") {
     html = `
