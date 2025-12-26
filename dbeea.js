@@ -106,7 +106,7 @@ education.
 </p>
       <p><strong>This award is completely free of charge (No Registration Fee, No Charges) and open to teachers, professors, and researchers from government, private, and semi-government institutions.</strong>
 </p>
-  <img src="/public/images/award.JPG" alt="Education Award">
+  <img src="hhttps://res.cloudinary.com/dpvskptln/image/upload/v1766719779/033_toth4c.jpg" alt="Education Award">
     `;
   } else if (eventType === "innovation") {
     html = `
@@ -134,7 +134,7 @@ innovators. It supports the National Education Policy (NEP 2020) vision of promo
 experimentation, and critical thinking at the school level.
 It will also bring visibility to schools that foster a culture of innovation, inspiring others to follow
 similar practices.</p>
-      <img src="/public/images/innno.JPG" alt="Innovation Challenge">
+      <img src="https://res.cloudinary.com/dpvskptln/image/upload/v1766719764/17_deeita.jpg" alt="Innovation Challenge">
     `;
   } else if (eventType === "startup") {
     html = `
@@ -165,7 +165,7 @@ support young changemakers who are working to build a better future for the Hima
     <li>To inspire students to take interest in problem-solving and creative thinking.</li>
     </ol></p>
     <br>
-    <img src="/public/images/expo.JPG" alt="Startup Expo">
+    <img src="https://res.cloudinary.com/dpvskptln/image/upload/v1766719754/15_mnttsu.jpg" alt="Startup Expo">
     `;
   }
 
@@ -176,39 +176,6 @@ support young changemakers who are working to build a better future for the Hima
 function closeDetails() {
   document.getElementById("eventDetails").style.display = "none";
 }
-
-const track = document.querySelector(".carousel-track");
-const cards = document.querySelectorAll(".carousel-card");
-
-let step = 0;
-let cardWidth = cards[0].offsetWidth + 20; // width + margin
-let totalCards = cards.length / 2; // half because of duplication
-
-function slideCarousel() {
-  step++;
-  track.style.transform = `translateX(-${step * cardWidth}px)`;
-
-  // reset when reached the end
-  if (step >= totalCards) {
-    setTimeout(() => {
-      track.style.transition = "none";
-      step = 0;
-      track.style.transform = `translateX(0)`;
-    }, 500);
-
-    setTimeout(() => {
-      track.style.transition = "transform 0.5s ease-in-out";
-    }, 550);
-  }
-}
-
-// Auto slide every 2.5s
-setInterval(slideCarousel, 2500);
-
-// Recalculate width on resize
-window.addEventListener("resize", () => {
-  cardWidth = cards[0].offsetWidth + 20;
-});
 
 // Back to TOP
 const backToTop = document.getElementById("backToTop");
@@ -283,3 +250,35 @@ window.addEventListener("scroll", () => {
 function closeReg() {
   stickyBar.style.display = "none";
 }
+
+const track = document.querySelector(".carousel-track");
+const cards = Array.from(track.children);
+
+// Duplicate cards to make infinite scroll smooth
+track.innerHTML += track.innerHTML;
+
+// Set initial scroll position
+let scrollAmount = 0;
+
+// Get width of one card including margin
+const cardStyle = getComputedStyle(cards[0]);
+const cardWidth = cards[0].offsetWidth + parseInt(cardStyle.marginRight);
+
+// Infinite scroll speed (pixels per frame)
+const speed = 1;
+
+function animate() {
+  scrollAmount += speed;
+
+  // Reset scroll when reaching half of total scroll width
+  if (scrollAmount >= track.scrollWidth / 2) {
+    scrollAmount = 0;
+  }
+
+  track.style.transform = `translateX(-${scrollAmount}px)`;
+
+  requestAnimationFrame(animate);
+}
+
+// Start the animation
+animate();

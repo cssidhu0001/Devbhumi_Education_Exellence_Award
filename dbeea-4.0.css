@@ -370,7 +370,6 @@
     }
 
     .countdown {
-        margin-top: 150px;
         gap: 5px;
     }
 }
@@ -383,7 +382,7 @@
 
     .countdown {
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 100px;
         gap: 5px;
         width: 70%;
         margin-left: auto;
@@ -1016,7 +1015,7 @@
     background: rgba(255, 255, 255, 0.9);
     padding: 25px 20px;
     border-radius: 20px;
-    width: 220px;
+    width: 250px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1408,35 +1407,59 @@
     }
 }
 
-
-
-
-.image-carousel {
+.carousel-container {
+    position: relative;
     width: 100%;
+    max-width: 1200px;
     overflow: hidden;
-    padding: 20px 0;
-    background: #fefefe;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-.carousel-wrapper {
-    overflow: hidden;
-    width: 100%;
+/* Left shadow */
+.carousel-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    /* width of the shadow */
+    height: 100%;
+    pointer-events: none;
+    /* so it doesn't block clicks */
+    background: linear-gradient(to right, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0));
+    z-index: 10;
+}
+
+/* Right shadow */
+.carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0));
+    z-index: 10;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    gap: 15px;
+    /* We will move it using JS */
+    will-change: transform;
+    user-select: none;
 }
 
 .carousel-card {
     flex: 0 0 auto;
-    width: clamp(250px, 28vw, 400px);
+    width: 300px;
     height: 300px;
-    margin-right: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    background: #000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-card img {
@@ -1454,19 +1477,17 @@
 /* Responsive */
 @media (max-width: 768px) {
     .carousel-card {
-        width: 70vw;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 }
 
 @media (max-width: 480px) {
     .carousel-card {
-        width: 90vw;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 }
-
-
 
 /* ========================= */
 /* EVENT SECTION */
