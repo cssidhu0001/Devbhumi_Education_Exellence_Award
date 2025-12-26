@@ -2,10 +2,7 @@
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const hamburger = document.querySelector(".hamburger");
-
   menu.classList.toggle("active");
-
-  // Change hamburger to cross when menu is open
   if (menu.classList.contains("active")) {
     hamburger.textContent = "✖";
   } else {
@@ -26,39 +23,31 @@ window.addEventListener("scroll", function () {
 /* ===== BACKGROUND SLIDER ===== */
 const slides = document.querySelectorAll(".hero-bg");
 let current = 0;
-
 function loadImage(slide) {
   const isMobile = window.innerWidth < 768;
   const img = isMobile ? slide.dataset.mobile : slide.dataset.desktop;
   slide.style.backgroundImage = `url(${img})`;
 }
 slides.forEach(loadImage);
-
 setInterval(() => {
   slides[current].classList.remove("active");
   current = (current + 1) % slides.length;
-
   slides[current].classList.add("active");
 }, 5000);
-
 window.addEventListener("resize", () => {
   slides.forEach(loadImage);
 });
 
 // * ===== COUNTDOWN TIMER ===== */
 const eventDate = new Date("February 7, 2026 10:00:00").getTime();
-
 function updateTimer() {
   const now = new Date().getTime();
   const diff = eventDate - now;
-
   if (diff <= 0) return;
-
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
   document.getElementById("days").innerText = days;
   document.getElementById("hours").innerText = String(hours).padStart(2, "0");
   document.getElementById("minutes").innerText = String(minutes).padStart(
@@ -70,14 +59,13 @@ function updateTimer() {
     "0"
   );
 }
-
 updateTimer();
 setInterval(updateTimer, 1000);
 
+// Modal Register
 function showDetails(eventType) {
   const modal = document.getElementById("eventDetails");
   const content = document.getElementById("eventContent");
-
   let html = "";
 
   if (eventType === "edu") {
@@ -168,18 +156,15 @@ support young changemakers who are working to build a better future for the Hima
     <img src="https://res.cloudinary.com/dpvskptln/image/upload/v1766719754/15_mnttsu.jpg" alt="Startup Expo">
     `;
   }
-
   content.innerHTML = html;
   modal.style.display = "block";
 }
-
 function closeDetails() {
   document.getElementById("eventDetails").style.display = "none";
 }
 
 // Back to TOP
 const backToTop = document.getElementById("backToTop");
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     backToTop.classList.add("show");
@@ -187,7 +172,6 @@ window.addEventListener("scroll", () => {
     backToTop.classList.remove("show");
   }
 });
-
 backToTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -196,17 +180,13 @@ backToTop.addEventListener("click", () => {
 });
 
 // Date Day Typing Effect
-
 const section = document.getElementById("eventSection");
 const dateText = document.getElementById("typingDate");
-
 const observer = new IntersectionObserver(
   ([entry]) => {
     if (entry.isIntersecting) {
-      // Reset typing
       dateText.classList.remove("type-active");
       dateText.style.width = "0";
-
       setTimeout(() => {
         dateText.classList.add("type-active");
       }, 100);
@@ -214,12 +194,10 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.6 }
 );
-
 observer.observe(section);
 
 // Scroll Section
 const links = document.querySelectorAll('a[href^="#"]');
-
 links.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -235,8 +213,8 @@ links.forEach((link) => {
   });
 });
 
+// Registration Sticky Button
 const stickyBar = document.getElementById("regSticky");
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 80) {
     stickyBar.classList.remove("full");
@@ -246,39 +224,28 @@ window.addEventListener("scroll", () => {
     stickyBar.classList.remove("slim");
   }
 });
-
 function closeReg() {
   stickyBar.style.display = "none";
 }
 
+// Image Coursel
 const track = document.querySelector(".carousel-track");
 const cards = Array.from(track.children);
-
-// Duplicate cards to make infinite scroll smooth
 track.innerHTML += track.innerHTML;
-
-// Set initial scroll position
 let scrollAmount = 0;
-
-// Get width of one card including margin
 const cardStyle = getComputedStyle(cards[0]);
 const cardWidth = cards[0].offsetWidth + parseInt(cardStyle.marginRight);
-
-// Infinite scroll speed (pixels per frame)
 const speed = 1;
 
 function animate() {
   scrollAmount += speed;
 
-  // Reset scroll when reaching half of total scroll width
   if (scrollAmount >= track.scrollWidth / 2) {
     scrollAmount = 0;
   }
-
   track.style.transform = `translateX(-${scrollAmount}px)`;
 
   requestAnimationFrame(animate);
 }
 
-// Start the animation
 animate();

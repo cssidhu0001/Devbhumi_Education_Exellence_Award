@@ -21,29 +21,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
   </head>
-
   <body>
     <button id="backToTop">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
-
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="nav">
         <div class="logo">
           <a href="/">DBEEA <span>4.0</span></a>
         </div>
-
         <!-- Hamburger for mobile -->
         <div class="hamburger" onclick="toggleMenu()">☰</div>
-
         <!-- Nav Links -->
         <ul id="menu">
           <li><a href="/">Home</a></li>
           <li><a href="#events">Our Events</a></li>
           <li><a href="#contactsUs">Contact</a></li>
           <li><a download="">Brochure</a></li>
-
           <!-- Register Dropdown -->
           <li class="dropdown">
             <button class="dropbtn">Register Now ▼</button>
@@ -68,7 +63,6 @@
         </ul>
       </div>
     </header>
-
     <!-- HERO -->
     <section class="hero">
       <div
@@ -156,7 +150,6 @@
         data-desktop="https://res.cloudinary.com/dpvskptln/image/upload/w_1200,h_700,c_fill,f_auto,q_auto/v1766719777/022_k4k9ys.jpg"
         data-mobile="https://res.cloudinary.com/dpvskptln/image/upload/w_1200,h_700,c_fill,f_auto,q_auto/v1766719777/022_k4k9ys.jpg"
       ></div>
-
       <!-- CONTENT -->
       <div class="hero-content">
         <h1 class="neon-text">Devbhmumi Education Excellence Award 4.0</h1>
@@ -193,35 +186,44 @@
         </div>
       </div>
     </section>
-
     <div class="carousel-container">
       <div class="carousel-track">
         <div class="carousel-card">
           <img
+            rel="preload"
+            as="image"
             src="https://res.cloudinary.com/dpvskptln/image/upload/w_300,h_300,c_fill,f_auto,q_auto/v1766720061/i3_emtyrv.jpg"
             alt="Image 1"
           />
         </div>
         <div class="carousel-card">
           <img
+            rel="preload"
+            as="image"
             src="https://res.cloudinary.com/dpvskptln/image/upload/w_300,h_300,c_fill,f_auto,q_auto/v1766719777/022_k4k9ys.jpg"
             alt="Image 2"
           />
         </div>
         <div class="carousel-card">
           <img
+            rel="preload"
+            as="image"
             src="https://res.cloudinary.com/dpvskptln/image/upload/w_300,h_300,c_fill,f_auto,q_auto/v1766719777/21_f04jxx.jpg"
             alt="Image 3"
           />
         </div>
         <div class="carousel-card">
           <img
+            rel="preload"
+            as="image"
             src="https://res.cloudinary.com/dpvskptln/image/upload/w_300,h_300,c_fill,f_auto,q_auto/v1766720009/i2_ys1vsk.jpg"
             alt="Image 4"
           />
         </div>
         <div class="carousel-card">
           <img
+            rel="preload"
+            as="image"
             src="https://res.cloudinary.com/dpvskptln/image/upload/w_300,h_300,c_fill,f_auto,q_auto/v1766719864/DSC_6881_v28d8p.jpg"
             alt="Image 5"
           />
@@ -330,12 +332,10 @@
         </div>
       </div>
     </div>
-
     <!-- EVENTS SECTION -->
     <section id="events" class="events-section">
       <h2>Our Major Events</h2>
       <div class="events-container">
-        <!-- Event 1: Education Excellence Award -->
         <div class="event-card">
           <h3>Devbhumi Education Excellence Awards</h3>
           <p>
@@ -361,8 +361,6 @@
             >
           </div>
         </div>
-
-        <!-- Event 2: Innovation Challenge -->
         <div class="event-card">
           <h3>Devbhumi Little Scientists</h3>
           <p>
@@ -393,8 +391,6 @@
             >
           </div>
         </div>
-
-        <!-- Event 3: Startup Expo -->
         <div class="event-card">
           <h3>Devbhumi Startup Expo</h3>
           <p>
@@ -431,20 +427,16 @@
         </div>
       </div>
     </section>
-
     <!-- ===== EVENT DETAILS MODAL ===== -->
     <div id="eventDetails" class="event-details">
       <span class="close-btn" onclick="closeDetails()">&times;</span>
-      <div id="eventContent">
-        <!-- Content will be injected here via JS -->
-      </div>
+      <div id="eventContent"></div>
     </div>
 
     <!-- ===== CHIEF & OTHER GUESTS SECTION ===== -->
     <section class="guests-section">
       <h2>Our Esteemed Guests in Previous Years</h2>
       <h1 class="announce">Cheif Guest 4.0. | Soon To be Announced!!</h1>
-      <!-- CHIEF GUEST -->
       <div class="chief-guest">
         <img
           src="https://drdhansinghrawat.com/wp-content/uploads/2025/07/dr-dhan-singh-rawat-about-us.jpg"
@@ -508,8 +500,6 @@
           <h1>DBEEA 1.0</h1>
         </div>
       </div>
-
-      <!-- OTHER GUESTS CARDS -->
       <div class="other-guests">
         <div class="guest-card">
           <h4>Shri Vishnu Saran</h4>
@@ -534,7 +524,6 @@
         </div>
       </div>
     </section>
-
     <!-- ===== HOSTS & SPONSORS SECTION ===== -->
     <section class="hosts-sponsors-section">
       <h2>Our Hosts & Partners</h2>
@@ -573,22 +562,17 @@
         </div>
       </div>
     </section>
-
     <section class="core-team">
       <div class="overlay"></div>
-
       <h2>Core Execution Team</h2>
       <p class="subtitle">
         Leadership & Execution Behind Devbumi Education Excellence Award 4.0
       </p>
-
       <div class="team-row">
         <div class="team-card delay-1">
           <h3>Dr Tarun kumar Saxena</h3>
           <span class="designation">Executive Director, MIET Kumaon</span>
-
           <span class="badge">Organizing Secretary</span>
-
           <div class="contact">
             <a href="mailto:tarunsaxena@mietkumaon.ac.in "
               >📧tarunsaxena@mietkumaon.ac.in
@@ -599,9 +583,7 @@
         <div class="team-card delay-1">
           <h3>Dr. Kamal Rawat</h3>
           <span class="designation">CEO, ACIC DBF</span><br />
-
           <span class="badge">Convenor</span>
-
           <div class="contact">
             <a href="mailto:kamal.rawat@mietkumaon.ac.in"
               >📧 kamal.rawat@mietkumaon.ac.in</a
@@ -612,12 +594,10 @@
         <div class="team-card delay-3">
           <h3>Dr. Vatsalya Sharma</h3>
           <span class="designation">Manager, ACIC DBF</span>
-
           <span class="badge"
             ><h4>Coordinator</h4>
             Devbhumi Startup Expo</span
           >
-
           <div class="contact">
             <a href="mailto:vatsalya-bba@sanskar.org"
               >📧vatsalya-bba@sanskar.org</a
@@ -625,16 +605,13 @@
             <a href="tel:+919720585558">📞+91 97205 85558</a>
           </div>
         </div>
-
         <div class="team-card delay-2">
           <h3>Charanjeet Singh Sidhu</h3>
           <span class="designation">Young Professional, ACIC DBF</span>
-
           <span class="badge"
             ><h4>Coordinator</h4>
             Devbhumi Little Scientist</span
           >
-
           <div class="contact">
             <a href="mailto:charanjeetsidhu@mietkumaon.ac.in"
               >📧 charanjeet@mietkumaon.ac.in</a
@@ -642,16 +619,13 @@
             <a href="tel:+918433324414">📞 +91 8433324414</a>
           </div>
         </div>
-
         <div class="team-card delay-4">
           <h3>Mrs. Sonam Bhandari</h3>
           <span class="designation">Young Professional, ACIC DBF</span>
-
           <span class="badge"
             ><h4>Coordinator</h4>
             Education Excellence Award</span
           >
-
           <div class="contact">
             <a href="mailto:sonambhandari@mietkuamaon.ac.in"
               >📧sonambhandari@mietkumaon.ac</a
@@ -661,11 +635,9 @@
         </div>
       </div>
     </section>
-
     <!-- ===== CONTACT & VENUE SECTION ===== -->
     <section class="contact-venue" id="contactsUs">
       <div class="container">
-        <!-- Left Column: Details -->
         <div class="contact-info">
           <h2>Contact & Venue</h2>
           <p><strong>Date:</strong> 07 February 2026</p>
@@ -679,8 +651,6 @@
             >Get Directions</a
           >
         </div>
-
-        <!-- Right Column: Google Map -->
         <div class="contact-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3492.429073584838!2d79.407938!3d29.2138012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09d11a700658d%3A0xcef66f01175e6b47!2sMIET%20Kumaon%2C%20Haldwani!5e0!3m2!1sen!2sin!4v1703400000000!5m2!1sen!2sin"
@@ -694,8 +664,6 @@
 
     <footer class="site-footer">
       <div class="footer-container">
-        <!-- Top Section -->
-        <!-- Social Icons -->
         <div class="footer-social">
           <a
             href="https://www.facebook.com/mietk2011/"
@@ -750,13 +718,11 @@
         </div>
       </div>
     </footer>
-
     <section class="reg-sticky" id="regSticky">
       <div class="reg-inner">
         <span class="reg-text"
           >⏳ Registration closing soon. Don’t miss out!</span
         >
-
         <div class="reg-actions">
           <a href="#events" class="reg-btn" onclick="closeReg()"
             >Register Now</a
@@ -765,7 +731,6 @@
         </div>
       </div>
     </section>
-
     <script src="/dbeea.js"></script>
   </body>
 </html>

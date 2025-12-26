@@ -41,7 +41,6 @@
     color: #FF8F00;
 }
 
-/* Nav links */
 #menu {
     list-style: none;
     display: flex;
@@ -81,7 +80,6 @@
     color: #FF8F00;
 }
 
-/* Dropdown */
 .dropdown {
     position: relative;
 }
@@ -101,7 +99,6 @@
     top: 38px;
     z-index: 999;
     top: 40px;
-
 }
 
 .dropdown-content a {
@@ -119,7 +116,6 @@
     display: block;
 }
 
-/* Hamburger for mobile */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -128,7 +124,6 @@
     z-index: 1001;
 }
 
-/* Mobile Menu */
 @media(max-width:768px) {
     #menu {
         flex-direction: column;
@@ -163,7 +158,6 @@
         box-shadow: none;
         border-radius: 0;
         background: #1B5E20;
-        /* dropdown visible */
     }
 
     .dropdown-content a {
@@ -183,7 +177,6 @@
     overflow: hidden;
 }
 
-/* BACKGROUND SLIDES */
 .hero-bg {
     position: absolute;
     top: 0;
@@ -211,10 +204,6 @@
     animation: kenburns 12s ease-in-out infinite;
 }
 
-
-
-
-
 @keyframes kenburns {
     from {
         transform: scale(1) translate(0, 0);
@@ -225,7 +214,6 @@
     }
 }
 
-/* HERO CONTENT */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -326,11 +314,6 @@
     }
 }
 
-
-
-/* ===== RESPONSIVE ===== */
-
-/* Medium devices */
 @media(max-width: 1024px) {
     .hero-content h1 {
         font-size: 3rem;
@@ -350,7 +333,6 @@
     }
 }
 
-/* Small devices */
 @media(max-width: 768px) {
     .hero-content h1 {
         font-size: 2.4rem;
@@ -374,7 +356,6 @@
     }
 }
 
-/* Extra small devices (phones) */
 @media (max-width: 480px) {
     .hero-content {
         top: 10%;
@@ -411,42 +392,32 @@
         color: #ddd;
     }
 
-    /* Adjust colors for better visibility */
     .daydiv {
         color: #ffff00;
     }
 
-    /* Bright yellow */
     .hoursdiv {
         color: #00ffff;
     }
 
-    /* Cyan */
     .mindiv {
         color: #ff69b4;
     }
 
-    /* Pink */
     .secdiv {
         color: #ffffff;
     }
 
     .mountain {
-
         top: -30px;
-
     }
-
-    /* White */
 }
-
 
 /* ===== EVENTS SECTION ===== */
 .events-section {
     padding: 100px 20px;
     text-align: center;
     background: #F9FBFD;
-    /* Light background */
     color: #1b1b1b;
     font-family: 'Poppins', sans-serif;
 }
@@ -454,7 +425,6 @@
 .events-section h2 {
     font-size: 42px;
     color: #1B5E20;
-    /* Dark green royal accent */
     margin-bottom: 60px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -472,7 +442,6 @@
     background: #fff;
     border-radius: 20px;
     max-width: 400px;
-    /* Wider cards */
     width: 100%;
     padding: 40px 30px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -516,7 +485,6 @@
 .event-buttons {
     display: flex;
     justify-content: center;
-    /* Single line, centered */
     gap: 15px;
 }
 
@@ -533,10 +501,8 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
     flex: 1;
-    /* All buttons equal width */
 }
 
-/* Explore More: Green */
 .event-buttons .btn.explore {
     background: linear-gradient(135deg, #1B5E20, #43A047);
 }
@@ -546,7 +512,6 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Register Now: Red */
 .event-buttons .btn.register {
     background: linear-gradient(135deg, #C62828, #E53935);
 }
@@ -556,7 +521,6 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== RESPONSIVE ===== */
 @media(max-width: 992px) {
     .events-container {
         flex-direction: column;
@@ -573,11 +537,9 @@
     }
 }
 
-
 /* ===== EVENTS SECTION ===== */
 .events-section {
     padding: 60px 20px;
-    /* Reduced padding for small screens */
     text-align: center;
     background: #F9FBFD;
     color: #1b1b1b;
@@ -586,14 +548,12 @@
 
 .events-section h2 {
     font-size: 36px;
-    /* Slightly smaller */
     color: #1B5E20;
     margin-bottom: 50px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-/* ===== EVENT CARDS ===== */
 .events-container {
     display: flex;
     gap: 20px;
@@ -644,13 +604,12 @@
     margin-bottom: 6px;
 }
 
-/* ===== BUTTONS ===== */
+
 .event-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    /* Allow buttons to wrap on small screens */
 }
 
 .event-buttons .btn {
@@ -666,10 +625,8 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
     flex: 1 1 auto;
-    /* Buttons stretch equally */
 }
 
-/* Explore More: Green */
 .event-buttons .btn.explore {
     background: linear-gradient(135deg, #1B5E20, #43A047);
 }
@@ -679,7 +636,6 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Register Now: Red */
 .event-buttons .btn.register {
     background: linear-gradient(135deg, #C62828, #E53935);
 }
@@ -689,7 +645,6 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== EVENT DETAILS MODAL ===== */
 .event-details {
     display: none;
     position: fixed;
@@ -754,7 +709,6 @@
     color: #1976D2;
 }
 
-/* ===== RESPONSIVE MEDIA QUERIES ===== */
 @media(max-width: 1200px) {
     .events-container {
         gap: 15px;
@@ -817,12 +771,8 @@
     }
 }
 
-
-
-/* ===== GUESTS SECTION ===== */
 .guests-section {
     background: #F9FBFD;
-    /* Light background */
     padding: 100px 20px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -841,7 +791,6 @@
     padding-bottom: 15px;
 }
 
-/* CHIEF GUEST */
 .chief-guest {
     display: flex;
     align-items: center;
@@ -892,7 +841,6 @@
     color: #333;
 }
 
-/* OTHER GUESTS */
 .other-guests {
     display: flex;
     justify-content: center;
@@ -925,7 +873,6 @@
     color: #1976D2;
 }
 
-/* RESPONSIVE */
 @media(max-width: 992px) {
     .chief-guest {
         flex-direction: column;
@@ -952,7 +899,6 @@
     font-weight: 700;
 }
 
-/* CHIEF GUEST */
 .chief-guest {
     display: flex;
     align-items: center;
@@ -1003,7 +949,6 @@
     color: #333;
 }
 
-/* OTHER GUESTS */
 .other-guests {
     display: flex;
     justify-content: center;
@@ -1036,7 +981,6 @@
     color: #1976D2;
 }
 
-/* RESPONSIVE */
 @media(max-width: 992px) {
     .chief-guest {
         flex-direction: column;
@@ -1048,10 +992,6 @@
     }
 }
 
-
-
-
-/* ===== HOSTS & SPONSORS SECTION ===== */
 .hosts-sponsors-section {
     background: #F9FBFD;
     padding: 100px 20px;
@@ -1066,7 +1006,6 @@
     font-weight: 700;
 }
 
-/* HOSTS CARDS */
 .hosts {
     display: flex;
     justify-content: center;
@@ -1119,7 +1058,6 @@
     text-decoration: underline;
 }
 
-/* SPONSORS CAROUSEL */
 .sponsors-wrap {
     overflow: hidden;
     max-width: 100%;
@@ -1152,7 +1090,6 @@
     }
 }
 
-/* RESPONSIVE */
 @media(max-width: 992px) {
     .hosts {
         gap: 25px;
@@ -1173,12 +1110,8 @@
     }
 }
 
-
-
-/* ===== CONTACT & VENUE SECTION ===== */
 .contact-venue {
     background: #EDF7F2;
-    /* subtle greenish background for difference */
     padding: 100px 20px;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
@@ -1231,7 +1164,6 @@
     background: #FF8F00;
 }
 
-/* Right Column Map */
 .contact-map {
     flex: 1;
     min-width: 300px;
@@ -1239,7 +1171,6 @@
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     height: 450px;
-    /* increased height */
 }
 
 .contact-map iframe {
@@ -1248,7 +1179,6 @@
     border: 0;
 }
 
-/* RESPONSIVE */
 @media(max-width: 992px) {
     .contact-venue .container {
         flex-direction: column;
@@ -1265,8 +1195,6 @@
     }
 }
 
-
-/* MOBILE */
 @media(max-width:768px) {
     #menu {
         display: none;
@@ -1297,11 +1225,8 @@
     }
 }
 
-
-/* ===== Footer Styles ===== */
 .site-footer {
     background: #1B5E20;
-    /* Dark green */
     color: #fff;
     padding: 50px 20px;
     font-family: 'Poppins', sans-serif;
@@ -1320,7 +1245,6 @@
 
 .footer-top a {
     color: #FFD700;
-    /* Golden royal color */
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
@@ -1330,7 +1254,6 @@
     color: #FF8F00;
 }
 
-/* Social Icons */
 .footer-social {
     margin-top: 20px;
     display: flex;
@@ -1346,11 +1269,9 @@
 
 .footer-social a:hover {
     color: #FFD700;
-    /* Hover gold */
     transform: scale(1.3);
 }
 
-/* Social Icons with circular background */
 .footer-social a {
     font-size: 20px;
     color: #fff;
@@ -1367,17 +1288,13 @@
     overflow: hidden;
 }
 
-/* Hover effects */
 .footer-social a:hover {
     color: #FFD700;
-    /* Gold color on hover */
     background: rgba(255, 215, 0, 0.2);
-    /* Glow effect */
     transform: scale(1.2);
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
 
-/* Optional: Animated ripple on hover */
 .footer-social a::after {
     content: "";
     position: absolute;
@@ -1395,8 +1312,6 @@
     transform: scale(1.5);
 }
 
-
-/* Responsive */
 @media(max-width:768px) {
     .footer-social {
         gap: 15px;
@@ -1417,22 +1332,18 @@
     box-sizing: border-box;
 }
 
-/* Left shadow */
 .carousel-container::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 60px;
-    /* width of the shadow */
     height: 100%;
     pointer-events: none;
-    /* so it doesn't block clicks */
     background: linear-gradient(to right, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0));
     z-index: 10;
 }
 
-/* Right shadow */
 .carousel-container::after {
     content: "";
     position: absolute;
@@ -1448,7 +1359,6 @@
 .carousel-track {
     display: flex;
     gap: 15px;
-    /* We will move it using JS */
     will-change: transform;
     user-select: none;
 }
@@ -1474,7 +1384,6 @@
     transform: scale(1.05);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .carousel-card {
         width: 200px;
@@ -1489,9 +1398,6 @@
     }
 }
 
-/* ========================= */
-/* EVENT SECTION */
-/* ========================= */
 .event-section {
     width: 100%;
     padding: 80px 16px;
@@ -1505,9 +1411,6 @@
     text-align: center;
 }
 
-/* ========================= */
-/* DATE (TYPING) */
-/* ========================= */
 .event-date {
     font-size: 4rem;
     font-weight: 800;
@@ -1519,7 +1422,6 @@
     width: 0;
 }
 
-/* Typing animation class (added via JS) */
 .type-active {
     animation: typing 2.5s steps(24, end) forwards,
         blink 0.7s infinite;
@@ -1541,9 +1443,6 @@
     }
 }
 
-/* ========================= */
-/* DAY + UNDERLINE (OLD STYLE) */
-/* ========================= */
 .event-day {
     font-size: 2.2rem;
     font-weight: 600;
@@ -1564,9 +1463,6 @@
     background: linear-gradient(90deg, #ff6b6b, #ffa502);
 }
 
-/* ========================= */
-/* TIME CHIPS */
-/* ========================= */
 .event-time-wrap {
     margin-top: 32px;
     display: flex;
@@ -1597,7 +1493,6 @@
     color: #aaa;
 }
 
-
 @media (max-width: 768px) {
     .event-date {
         font-size: 3rem;
@@ -1622,8 +1517,6 @@
     }
 }
 
-
-
 /* Back to Top */
 #backToTop {
     position: fixed;
@@ -1645,22 +1538,16 @@
     z-index: 999;
 }
 
-/* Show button */
 #backToTop.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-/* Hover effect */
 #backToTop:hover {
     background: #029b38;
     transform: translateY(-4px);
 }
-
-
-
-/* Executive Team */
 
 .core-team {
     position: relative;
@@ -1720,7 +1607,6 @@
     font-size: 24px;
     color: orange;
     margin-bottom: 6px;
-    /* color: #eaffff; */
 }
 
 .designation {
@@ -1753,7 +1639,6 @@
     text-decoration: underline;
 }
 
-/* Animation delays */
 .delay-1 {
     animation-delay: 0.2s;
 }
@@ -1782,19 +1667,11 @@
     }
 }
 
-/* Responsive */
 @media (max-width: 1100px) {
     .team-row {
         flex-wrap: wrap;
     }
 }
-
-
-
-
-/* Registrations Closing Soon */
-
-/* ===== Sticky Royal Registration Bar ===== */
 
 .reg-sticky {
     position: fixed;
@@ -1802,8 +1679,6 @@
     left: 0;
     width: 100%;
     z-index: 9999;
-
-    /* Royal glass background */
     background: linear-gradient(135deg,
             rgba(25, 25, 45, 0.88),
             rgba(10, 10, 25, 0.88));
@@ -1814,19 +1689,16 @@
     box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* Inner layout */
 .reg-inner {
     max-width: 1200px;
     margin: auto;
     padding: 10px 16px;
-    /* 👈 slim height */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
 }
 
-/* Text */
 .reg-text {
     font-size: 14.5px;
     font-weight: 500;
@@ -1834,14 +1706,12 @@
     color: rgba(255, 255, 255, 0.85);
 }
 
-/* Actions */
 .reg-actions {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* CTA Button */
 .reg-btn {
     background: linear-gradient(135deg, #f3c97a, #d1a04d);
     color: #1a1a1a;
@@ -1860,7 +1730,6 @@
     box-shadow: 0 10px 24px rgba(209, 160, 77, 0.45);
 }
 
-/* Close button */
 .reg-close {
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1880,8 +1749,6 @@
 .reg-close:hover {
     background: rgba(255, 255, 255, 0.25);
 }
-
-/* ===== Mobile Responsiveness ===== */
 
 @media (max-width: 480px) {
     .reg-inner {
@@ -1905,8 +1772,6 @@
     }
 }
 
-
-/* Transition smoothness */
 .reg-sticky,
 .reg-inner,
 .reg-text,
@@ -1914,7 +1779,6 @@
     transition: all 0.35s ease;
 }
 
-/* ===== FULL MODE (First View) ===== */
 .reg-sticky.full .reg-inner {
     padding: 16px 18px;
 }
@@ -1928,7 +1792,6 @@
     font-size: 15px;
 }
 
-/* ===== SLIM MODE (After Scroll) ===== */
 .reg-sticky.slim .reg-inner {
     padding: 8px 16px;
 }
