@@ -186,8 +186,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1s ease;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out, transform 20s ease-in-out;
     z-index: 0;
 }
 
@@ -201,6 +201,8 @@
 
 .hero-bg.active {
     opacity: 1;
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .hero-content {
