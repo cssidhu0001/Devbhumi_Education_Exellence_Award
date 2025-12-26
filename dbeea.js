@@ -27,24 +27,20 @@ window.addEventListener("scroll", function () {
 const slides = document.querySelectorAll(".hero-bg");
 let current = 0;
 
-/* Lazy load + device image */
 function loadImage(slide) {
   const isMobile = window.innerWidth < 768;
   const img = isMobile ? slide.dataset.mobile : slide.dataset.desktop;
   slide.style.backgroundImage = `url(${img})`;
 }
-
-/* Load first slide */
 slides.forEach(loadImage);
 
-/* Auto slide */
 setInterval(() => {
   slides[current].classList.remove("active");
   current = (current + 1) % slides.length;
-  slides[current].classList.add("active");
-}, 6000);
 
-/* Reload images on resize */
+  slides[current].classList.add("active");
+}, 5000);
+
 window.addEventListener("resize", () => {
   slides.forEach(loadImage);
 });
